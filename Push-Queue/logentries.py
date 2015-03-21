@@ -59,3 +59,7 @@ class PushQueue(logging.Handler):
 
     def close(self):
         logging.Handler.close(self)
+
+application = webapp.WSGIApplication([
+    ('/logentriesworker', LogentriesWorker)
+])
